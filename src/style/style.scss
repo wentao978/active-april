@@ -1,0 +1,171 @@
+/************Happy Reader*************/
+body{max-width:640px; width:100%; margin:0 auto; position:relative; background:#8cbed1;}
+
+#content{ max-width:640px; width:100%; height:29.4rem; position:relative; overflow:hidden;}
+.baseDiv{ width:100%; z-index:1;}
+
+
+.timeDiv{ width:7rem; height:1.4rem; line-height:1.5rem; left:4.5rem; top:9.8rem; border-radius:1rem; color:#fff; background-color:#5598be; font-size:0.6rem;}
+.time{ display:inline-block; width:0.5rem; text-align:center;}
+.cursor{ width:2.22rem; height:2.62rem; left:3.6rem; top:12rem;}
+.cursor.active{ -webkit-animation: cursor 1s linear infinite; animation: cursor 1s linear infinite;}
+/* 1-0.3rem 2-5.1rem 3-9.8rem */
+.star{ width:5.6rem; height:5.6rem; left:0.3rem; top:12.9rem; z-index:1;}
+.star img{-webkit-animation: star 3s linear infinite; animation: star 3s linear infinite;}
+.box1{ width:4.31rem; height:7.88rem; z-index:2; left:0.8rem; top:12.27rem;}
+.box2{ width:4.76rem; height:7.88rem; z-index:2; left:5.5rem; top:12.27rem;}
+.box3{ width:4.16rem; height:7.88rem; z-index:2; left:10.8rem; top:12.27rem;}
+.red{ color:#df1111;}
+.shake{-webkit-animation: shake 1ms infinite; animation: shake 1ms infinite;}
+
+.btnWrap{ width:100%; top:21rem;}
+.ruleWrap,.recordWrap{ width:6.12rem; display:inline-block; height:1.8rem; background-repeat:no-repeat; background-size:100% auto;}
+.ruleWrap{ margin: 0 1.13rem 0 1.3rem; background-image:url(../images/rule.png);}
+.ruleWrap:active{ background-image:url(../images/rule-active.png);}
+.recordWrap{ background-image:url(../images/record.png);}
+.recordWrap:active{ background-image:url(../images/record-active.png);}
+
+.rules{ overflow:hidden; padding-bottom:0.6rem;}
+.rules div{ color:black; font-size:0.56rem; margin:0.5rem 0.9rem; text-align:justify;}
+.rule-pic{ width:22%; margin:0.6rem 39% 0;}
+
+
+.chongzhi{ z-index:10; overflow:hidden;display:none; background:#fff;border-radius:1.25rem; width:13.6rem; left:50%; top:50%; transform:translate3d(-50%,-50%,0);padding-top:0.5rem;}
+.lingqu{z-index:10; overflow:hidden;display:none; background:#fff;border-radius:1.25rem; width:13.6rem; left:50%; top:50%; transform:translate3d(-50%,-50%,0); padding:0.5rem 0;}
+.lingqu .prize{ width:11.9rem; height:9.96rem; margin:0 0.85rem;}
+
+.addressInfo{z-index:10; overflow:hidden;display:block; background:#fff;border-radius:1.25rem; width:13.6rem; left:50%; top:50%; transform:translate3d(-50%,-50%,0); padding-top:0.5rem;}
+
+.thtext{font-size:0.7rem; bottom:4.2rem; color:white; padding:0 2% 0 4%; height:1.3rem; line-height:1.3rem; z-index:5; background:#ba0f23; box-shadow:0 3px rgba(0,0,0,.12);}
+.thIconWrap{ top:26em; width:14rem; padding:0 1rem;}
+.thIconWrap a{ display:inline-block;  width:3.5rem; height:3.8em; float:left;}
+.thIconWrap a img{ display:block; width:2.17rem; height:2.25rem; margin:0 auto;}
+.thIconWrap a span{ font-size:0.5em; color:white; position:relative; top:-0.9em; text-shadow:0 0.12rem 0.05rem #333;}
+
+
+.rules .infotext{ width: 72%;text-align: justify; margin: 0 14%;}
+
+.shaddress .tianxie{ font-size:0.8em; color:#fff; width:90%; margin:.5em 5%; color:#fcf292;}
+.shaddress .form-control{ width:90%; padding:0 5%; font-size:.6rem; color:#fff; height:3em; line-height:3em; border-bottom:1px solid rgba(0,0,0,.3);}
+.shaddress .form-control label{ width:28%; display:inline-block; text-align:justify; color:rgba(0,0,0,.6);}
+.shaddress .form-control input{ width:70%; display:inline-block; background:none; border:none; height:2.4em; line-height:1.2em; padding:0; font-size:1em; color:#000;}
+.shaddress .addressCon{border:1px solid #000; background:none; border-radius:.5em; height:2em; padding:0 0; color:#000; font-size:.6em; width:20%; margin:0.4em 40%; box-sizing:border-box;}
+.shaddress .warntext{ color:rgba(0,0,0,.6); font-size:0.6rem; width:66%; margin:0.4rem 17%; display:block;}
+
+.otherInfo{ width:98%; padding:0 1%; font-size:.7em; color:#000; text-align:center; text-overflow:ellipsis; white-space:nowrap; overflow:hidden;}
+.xiugai{border:1px solid #000; background:none; border-radius:.5em; height:2.2em; padding:0 0; color:#000; font-size:.5em; width:30%; margin:0.1em 35% 0.2em; box-sizing:border-box;}
+.prizeWrap p,.pw p{ margin:0 1.4em; color:rgba(0,0,0,.6); font-size:0.4em;}
+.prizeWrap p:nth-of-type(1){ font-size:0.5em; margin-left:1em; /*word-break:break-all; word-wrap:break-word;*/}
+.prizeWrap p:nth-of-type(4){ margin-bottom:0.8rem;}
+
+#popDiv .textWrap{ left:6.3em; top:9.2em; width:48%; overflow:hidden; height:3em;font-size:0.7em; word-break:break-all; text-align:center; color:#fff;}
+
+.fail{ z-index:10; overflow:hidden;display:none; background:#fff;border-radius:1.25rem; width:13.6rem; left:50%; top:50%; transform:translate3d(-50%,-50%,0); padding-top:1.5rem; padding-bottom:2rem;}
+.success{  z-index:50; width:100%; display:none; margin-top:3em; left:50%; transform:translateX(-50%); max-width:640px;}
+.error{ width:38.5185%; left:50%; top:50%; transform:translate(-50%,-50%); -webkit-transform:translate(-50%,-50%); z-index:50; display:none;}
+/*********弹窗********/
+#mask{ width:100%; height:100%; background:rgba(0,0,0,.78); z-index:8; /*display:none;*/}
+#down{ position:absolute; left:0; transition:all 0.5s; top:36.8em; font-size:0.6em; background:rgba(0,0,0,.6); color:#fff; border-radius:0 0.3em 0.3em 0; padding:0.4em 0.5em 0.3em;}
+#activeRuleWrap{ width:100%; max-width:640px; margin:0 auto; position:relative; z-index:9;}
+#activeRuleDiv{ background:#fff; border-radius:1.25rem; width:13.6rem; left:50%; top:50%; transform:translate3d(-50%,-50%,0)}
+
+.get{display:block;font-size: 0.66rem; margin: 0.4rem 22% 0.1rem; padding: 0.3em 0; color: #000; width: 56%; display: inline-block; border: 1px solid #000; border-radius: 0.2em;}
+.inAddressWrap{z-index:10; overflow:hidden;display:none; background:#fff;border-radius:1.25rem; width:13.6rem; left:50%; top:40%; transform:translate3d(-50%,-50%,0); padding-bottom:1rem;}
+.close-button{ width:1.11rem; right:0.7rem; top:0.6rem; cursor:pointer;}
+.shouhuo,.pw .shouhuo{font-size:0.8em;  width:90%; margin:0 5%;}
+.prizeImg{ width:80%; margin:0 10%;}
+.addressInfo .prizeImg{ width: 11.9rem; height: 9.96rem; margin: 0 0.85rem;}
+.namePhone{ width:90%; padding:0 5%; font-size:.5em; text-align:center; text-overflow:ellipsis; white-space:nowrap; overflow:hidden;}
+.otherInfo{ width:98%; padding:0 1%; font-size:.5em; text-align:center; text-overflow:ellipsis; white-space:nowrap; overflow:hidden;}
+.jieshao{ width:92%; padding:0 4%; margin-bottom:0.2em; color:#a9a7a2; word-break:break-all; word-wrap:break-word; font-size:0.4em;}
+
+.shaddress{ z-index:10;}
+.chongzhi .phoneCon{ border:1px solid #000; background:none; border-radius:.3em; height:2em; padding:0 0; color:#000; font-size:.6em; width:25%; box-sizing:border-box;}
+.chongzhi .phoneNum{ border:1px solid #000; background:none; border-radius:.3em; height:2em; line-height:1.2em; padding:0 0.2em; color:#000; font-size:.6em; width:70%; box-sizing:border-box;}
+.chongzhi .inaddress,.pw .inaddress{display:none;font-size:0.5em; display:inline-block; width:66%; margin:1.5em 17% 0.5em; color:rgba(0,0,0,.6);}
+.chongzhi .intro{ display:inline-block; width:96%; margin:0 2%; font-size:0.6em; color:rgba(255,255,255,.8);}
+.chongzhi .prize{ width: 11.9rem; height: 9.96rem; margin: 0 0.85rem;}
+.chongzhi .hongbaoForm{ width:70%; margin:0 15%;}
+.chongzhi .white{ color:#fff; border:2px solid #d5bd3e;}
+.chongzhi .yellow{ color:#fde14e; border:2px solid #d5bd3e;}
+.chongzhi .hasHongbao,.pw .hasHongbao{ width:90%; margin:.5rem 5%; text-align:center; color:#000; font-size:.6em;}
+::-webkit-input-placeholder { color:rgba(0,0,0,.4);}
+
+/*************toast***************/
+.fadeIn{ -webkit-animation-name: fadeIn; animation-name: fadeIn;}
+.toast{ z-index:1000; position:fixed; display:block; white-space:nowrap; top:45%; left:50%; transform:translateX(-50%); -webkit-transform:translateX(-50%); font-size:.7em; background:rgba(0,0,0,.4); color:rgba(255,255,255,.9); padding:0.25em 1em 0.2em; border-radius:1em;}
+.load{ width:100%; height:100%; position:fixed; z-index:40; background:rgba(0,0,0,.78); left:0; top:0; display:none;}
+.load-img{position:fixed; display:block; top:45%; z-index:40; left:50%; transform:translateX(-50%); -webkit-transform:translateX(-50%);}
+.animated-slow{ -webkit-animation-duration: 2.6s; animation-duration: 2.6s; -webkit-animation-fill-mode: both; animation-fill-mode: both; z-index: 20;}
+.animated-fast{ -webkit-animation-duration: 1.4s; animation-duration: 1.4s; -webkit-animation-fill-mode: both; animation-fill-mode: both; z-index: 20;}
+
+@-webkit-keyframes fadeIn {
+  0% { opacity:0 }
+  30%,70%{ opacity:1}
+  100%{opacity:0}
+}
+@keyframes fadeIn {
+  0%{opacity:0}
+  30%,70%{opacity:1}
+  100%{opacity:0}
+}
+
+@-webkit-keyframes star {
+  0% {
+    -webkit-transform:rotateZ(0deg);
+  }
+
+  100% {
+    -webkit-transform:rotateZ(360deg);
+  }
+}
+@keyframes star {
+  0% {
+    transform:rotateZ(0deg);
+  }
+
+  100% {
+    transform:rotateZ(360deg);
+  }
+}
+
+@-webkit-keyframes cursor {
+  0% , 100% {
+    left:3.6rem;
+    top:12rem;
+  }
+
+  80% {
+    left:2.6rem;
+    top:13rem;
+  }
+}
+@keyframes cursor {
+  0% , 100% {
+    left:3.6rem;
+    top:12rem;
+  }
+
+  80% {
+    left:2.6rem;
+    top:13rem;
+  }
+}
+@-webkit-keyframes shake {
+  from {
+    -webkit-transform: rotate(1deg);
+  }
+
+  to {
+    -webkit-transform: rotate(-1deg);
+  }
+}
+@keyframes shake {
+  from {
+    transform: rotate(1deg);
+  }
+
+  to {
+    transform: rotate(-1deg);
+  }
+}

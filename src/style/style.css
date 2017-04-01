@@ -1,0 +1,20 @@
+body{
+	background-image: url(../images/4.png);
+	color:black;
+}
+#app{
+	background-color: #f90;
+}
+:local .big{
+	font-size:50px;
+}
+:local .red{
+	color:#f00;	
+}
+:local .some{
+	background-color:#f90;
+}
+:local .other{
+	composes:red;
+	background-color:#390;
+}
